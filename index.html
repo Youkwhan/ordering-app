@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ordering-App</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+		/>
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- css -->
+		<link rel="stylesheet" href="index.css" />
+	</head>
+
+	<body>
+		<section id="hero-section">
+			<header>
+				<h1>Youk's Diner</h1>
+				<h3>The best burgers and pizzas in town.</h3>
+			</header>
+		</section>
+		<main>
+			<section id="menu-section">
+				<!-- each menu item -->
+			</section>
+
+			<div id="cart-container" class="hidden">
+				<section id="checkout-section">
+					<h2 class="checkout-title">Your order</h2>
+					<div id="cart-orders" class="orders">
+						<!-- each order picked -->
+					</div>
+					<hr class="spacing" />
+					<div class="price">
+						<h2>Total price:</h2>
+						<h3 class="total-price"></h3>
+					</div>
+					<button id="checkout-btn" class="btn checkout-btn">
+						Complete order
+					</button>
+				</section>
+			</div>
+
+			<div id="modal" class="modal hidden">
+				<h2>Enter card details</h2>
+				<form id="card-form">
+					<input
+						type="text"
+						name="full-name"
+						placeholder="Enter your name"
+						required
+					/>
+					<input
+						type="text"
+						name="credit-number"
+						class="cc-number"
+						pattern="[0-9]{16}"
+						maxlength="16"
+						placeholder="Enter card number"
+						required
+					/>
+					<input
+						type="text"
+						name="credit-cvv"
+						class="cc-cvv"
+						pattern="[0-9]{3]"
+						maxlength="3"
+						placeholder="Enter CVV"
+						required
+					/>
+					<button class="btn modal-btn" type="submit">Pay</button>
+				</form>
+			</div>
+
+			<div id="order-success" class="hidden"></div>
+		</main>
+		<script src="index.js" type="module"></script>
+	</body>
+</html>
